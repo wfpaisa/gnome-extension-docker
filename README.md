@@ -32,7 +32,7 @@ The following actions are available from the GNOME Panel menu per Docker contain
 
 - **or** you can pull it from it's GitHub source code repository directly into it's required GNOME Shell directory [^3]
 
-  1.  `git clone https://github.com/RedSoftwareSystems/easy_docker_containers.git ~/.local/share/gnome-shell/extensions/easy_docker_containers@red.software.systems`
+  1.  `git clone https://github.com/RedSoftwareSystems/easy_docker_containers.git ~/.local/share/gnome-shell/extensions/gnome-extension-docker@wfpaisa`
   2.  Restart your shell: **[ALT]** + **[F2]** + _'**r**'_ + **[Enter]** _(or logout and login again)_
   3.  Enable the extension manually with '**_GNOME Extensions_**' application _(or with '**GNOME Tweaks**' application)_.
 
