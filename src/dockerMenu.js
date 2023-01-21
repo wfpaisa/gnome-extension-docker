@@ -15,7 +15,7 @@ const isContainerUp = (container) => container.status.indexOf("Up") > -1;
 
 // Docker icon as panel menu
 var DockerMenu = GObject.registerClass(
-  class DockerMenu extends panelMenu.Button {    
+  class DockerMenu extends panelMenu.Button {
     _init(menuAlignment, nameText) {
       super._init(menuAlignment, nameText);
       this._refreshCount = this._refreshCount.bind(this);
@@ -43,7 +43,8 @@ var DockerMenu = GObject.registerClass(
       const dockerIcon = new St.Icon({
         gicon: gicon,
         style_class: "system-status-icon",
-        icon_size: "16",
+        style: "padding:0",
+        icon_size: "18",
       });
       const loading = _("Loading...");
       this.buttonText = new St.Label({
@@ -52,8 +53,8 @@ var DockerMenu = GObject.registerClass(
       });
 
       hbox.add_child(dockerIcon);
-      hbox.add_child(arrowIcon(St.Side.BOTTOM));
-      hbox.add_child(this.buttonText);
+      // hbox.add_child(arrowIcon(St.Side.BOTTOM));
+      // hbox.add_child(this.buttonText);
       this.add_child(hbox);
       this.menu.connect("open-state-changed", this._refreshMenu.bind(this));
       this.menu.addMenuItem(new PopupMenuItem(loading));
@@ -132,9 +133,9 @@ var DockerMenu = GObject.registerClass(
       if (this._timeout) {
         GLib.source_remove(this._timeout);
       }
-   
-        this._timeout = null;
-      
+
+      this._timeout = null;
+
     }
 
     async _refreshCount() {

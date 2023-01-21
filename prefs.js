@@ -101,7 +101,7 @@ const SettingsWidget = GObject.registerClass(
   }
 );
 
-function init() {}
+function init() { }
 
 // Used on GNOME < 42 only, uses classical GTK4 Window and widgets
 function buildPrefsWidget() {

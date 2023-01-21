@@ -5,13 +5,13 @@
 }
 
 .status-stopped {
-	color: #ff3d00;
+	color: #FF84BD;
 }
 
 .status-running {
-	color: #00c853;
+	color: #72F9C8;
 }
 
 .status-paused {
-	color: #00b0ff;
+	color: #8EDFFF;
 }
